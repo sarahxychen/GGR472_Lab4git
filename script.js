@@ -102,7 +102,7 @@ map.on('load', () => {
 //Create turf hexgrid using coordinates from bounding box array 
 // bboxcoords = [min x, min y, max x, max y] -> find using console.log(bboxgeojson) in console log
 
-let bboxcoords= [-79.621974,43.590289,-79.122974,-79.122974]
+let bboxcoords= [-79.621974,43.590289,-79.122974,43.837935]
 
 // let bboxcoords = [bboxgeojson.geometry.coordinates[0][0][0], // min x coordinates
 //                  bboxgeojson.geometry.coordinates[0][0][1], // min y coordinates
