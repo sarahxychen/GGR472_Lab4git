@@ -90,7 +90,7 @@ map.on('load', () => {
 
 // Step 5: FINALIZE YOUR WEB MAP
 //Link hex density to button and display on map:
-document.getElementById('bbox').addEventListener('click', () => {
+// document.getElementById('bbox').addEventListener('click', () => {
 
     // stylize data after adding onto map 
     map.addSource('collis-hex', {
@@ -119,8 +119,28 @@ document.getElementById('bbox').addEventListener('click', () => {
         }
     });
 
-    document.getElementById('bbox').disabled = true; // disable button after click
-    }); 
+    // document.getElementById('bbox').disabled = true; // disable button after click
+    // }); 
+
+    //Add toggle feature for 2 layers
+
+    //Change collision point layer display based on check box using setLayoutProperty method
+    document.getElementById('collis_pts').addEventListener('change', (e) => {
+        map.setLayoutProperty(
+            'collision_pts',
+            'visibility',
+             e.target.checked ? 'visible' : 'none'
+         );
+    });
+
+    //Change collision density layer display based on check box using setLayoutProperty method
+    document.getElementById('bbox').addEventListener('change', (e) => {
+        map.setLayoutProperty(
+         'collis-hex-fill',
+         'visibility',
+          e.target.checked ? 'visible' : 'none'
+        );
+    });
 
     //add popup feature
     map.on('click', 'collis-hex-fill',(e) => {

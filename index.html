@@ -21,10 +21,36 @@
     <div id='map' class='map'></div>
 
     <!-- Map load event handler  -->
-    <div class='map-overlay'>
-        <button type="button" class="btn btn-primary btn-sm" id="bbox">Collision Density</button>
-    </div>
+    <div class='map-data-container'>
+        <label><h2>Filter Map View</h2></label>
+        <div class="form-check">
+            <input class="form-check-input" type="checkbox" value="" id="collis_pts" checked>
+            Show Collision Points
+        </div>
 
+        <div class="form-check">
+            <input class="form-check-input" type="checkbox" value="" id="bbox" checked>
+            Show Collision Density
+        </div>
+
+    </div>
+    <!-- <div class='map-overlay'>
+        <button type="button" class="btn btn-primary btn-sm" id="ped_pts">Collision Points</button>
+        <button type="button" class="btn btn-primary btn-sm" id="bbox">Collision Density</button>
+    </div> -->
+
+    <!-- Add legend for parking capacity information  -->
+
+    <div id='legend' class='legend'>
+        <h2>Collision Density</h2><h4>Collision Points per Hexagon</h4>
+        <div><span style='background-color: #a9c9f5'></span>0 - 4</div>
+        <div><span style='background-color: #7faef0'></span>5 - 9</div>
+        <div><span style='background-color: #608dcc'></span>10 - 19</div>
+        <div><span style='background-color: #3b66a3'></span>20 - 29</div>
+        <div><span style='background-color: #27508a'></span>30 - 39</div>
+        <div><span style='background-color: #163e75'></span>40 - 71</div>
+        <div><span style='background-color: #042757'></span> 72 </div>
+    </div>
 
     <script src="script.js"></script>
 
